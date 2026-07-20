@@ -1,0 +1,8 @@
+availability_365                 train_mean=134.718623   test_mean=132.805886   mean_shift=-1.42    ks_stat=0.008928 p_value=0.161668 status=No Drift
+minimum_nights                   train_mean=7.975818     test_mean=7.8589       mean_shift=-1.466   ks_stat=0.005483 p_value=0.729057 status=No Drift
+price                            train_mean=625.92903    test_mean=624.81224    mean_shift=-0.178   ks_stat=0.00463  p_value=0.887019 status=No Drift
+reviews_per_month                train_mean=1.295092     test_mean=1.294323     mean_shift=-0.059   ks_stat=0.004382 p_value=0.921785 status=No Drift
+number_of_reviews                train_mean=27.234602    test_mean=27.150656    mean_shift=-0.308   ks_stat=0.004147 p_value=0.948425 status=No Drift
+construction_year                train_mean=2012.492446  test_mean=2012.487547  mean_shift=-0.0     ks_stat=0.004033 p_value=0.959077 status=No Drift
+review_rate_number               train_mean=3.286664     test_mean=3.285453     mean_shift=-0.037   ks_stat=0.002968 p_value=0.999026 status=No Drift
+calculated_host_listings_count   train_mean=8.026037     test_mean=7.978957     mean_shift=-0.587   ks_stat=0.002263 p_value=0.999998 status=No Drift

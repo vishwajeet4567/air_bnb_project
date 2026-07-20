@@ -1,0 +1,559 @@
+Logging to: cell_outputs/cell_outputs.txt
+
+========================================
+Cell 1
+========================================
+Schema({'id': Int64, 'NAME': String, 'host id': Int64, 'host_identity_verified': String, 'host name': String, 'neighbourhood group': String, 'neighbourhood': String, 'lat': Float64, 'long': Float64, 'country': String, 'country code': String, 'instant_bookable': Boolean, 'cancellation_policy': String, 'room type': String, 'Construction year': Int64, 'price': String, 'service fee': String, 'minimum nights': Int64, 'number of reviews': Int64, 'last review': String, 'reviews per month': Float64, 'review rate number': Int64, 'calculated host listings count': Int64, 'availability 365': Int64, 'house_rules': String, 'license': String})
+Shape: (102599, 26)
+shape: (5, 26)
++---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------+
+| id      | NAME                   | host id     | host_identity_verifie | host name | neighbourhood | ... | reviews per month | review rate number | calculated host | availability 365 | house_rules           | license |
+| ---     | ---                    | ---         | d                     | ---       | group         |     | ---               | ---                | listings count  | ---              | ---                   | ---     |
+| i64     | str                    | i64         | ---                   | str       | ---           |     | f64               | i64                | ---             | i64              | str                   | str     |
+|         |                        |             | str                   |           | str           |     |                   |                    | i64             |                  |                       |         |
++==========================================================================================================================================================================================================================+
+| 1001254 | Clean & quiet apt home | 80014485718 | unconfirmed           | Madaline  | Brooklyn      | ... | 0.21              | 4                  | 6               | 286              | Clean up and treat    | null    |
+|         | by the ...             |             |                       |           |               |     |                   |                    |                 |                  | the home th...        |         |
+|---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------|
+| 1002102 | Skylit Midtown Castle  | 52335172823 | verified              | Jenna     | Manhattan     | ... | 0.38              | 4                  | 2               | 228              | Pet friendly but      | null    |
+|         |                        |             |                       |           |               |     |                   |                    |                 |                  | please confir...      |         |
+|---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------|
+| 1002403 | THE VILLAGE OF         | 78829239556 | null                  | Elise     | Manhattan     | ... | null              | 5                  | 1               | 352              | I encourage you to    | null    |
+|         | HARLEM....NEW Y...     |             |                       |           |               |     |                   |                    |                 |                  | use my kitc...        |         |
+|---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------|
+| 1002755 | null                   | 85098326012 | unconfirmed           | Garry     | Brooklyn      | ... | 4.64              | 4                  | 1               | 322              | null                  | null    |
+|---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------|
+| 1003689 | Entire Apt: Spacious   | 92037596077 | verified              | Lyndon    | Manhattan     | ... | 0.1               | 3                  | 1               | 289              | Please no smoking in  | null    |
+|         | Studio/Lo...           |             |                       |           |               |     |                   |                    |                 |                  | the house...          |         |
++---------+------------------------+-------------+-----------------------+-----------+---------------+-----+-------------------+--------------------+-----------------+------------------+-----------------------+---------+
+Null counts:
+shape: (1, 26)
++-----+------+---------+------------------------+-----------+---------------------+-----+-------------------+--------------------+--------------------------------+------------------+-------------+---------+
+| id  | NAME | host id | host_identity_verified | host name | neighbourhood group | ... | reviews per month | review rate number | calculated host listings count | availability 365 | house_rules | license |
+| --- | ---  | ---     | ---                    | ---       | ---                 |     | ---               | ---                | ---                            | ---              | ---         | ---     |
+| u32 | u32  | u32     | u32                    | u32       | u32                 |     | u32               | u32                | u32                            | u32              | u32         | u32     |
++============================================================================================================================================================================================================+
+| 0   | 249  | 0       | 289                    | 406       | 29                  | ... | 15879             | 326                | 319                            | 448              | 52131       | 102597  |
++-----+------+---------+------------------------+-----------+---------------------+-----+-------------------+--------------------+--------------------------------+------------------+-------------+---------+
+
+========================================
+Cell 2
+========================================
+Schema({'id': Int64, 'name': String, 'host_id': Int64, 'host_identity_verified': String, 'host_name': String, 'neighbourhood_group': String, 'neighbourhood': String, 'lat': Float64, 'long': Float64, 'country': String, 'country_code': String, 'instant_bookable': Boolean, 'cancellation_policy': String, 'room_type': String, 'construction_year': Int64, 'price': Float64, 'service_fee': Float64, 'minimum_nights': Int64, 'number_of_reviews': Int64, 'last_review': Date, 'reviews_per_month': Float64, 'review_rate_number': Int64, 'calculated_host_listings_count': Int64, 'availability_365': Int64, 'house_rules': String, 'license': String, 'neighbourhood_group_clean': String})
+shape: (10, 5)
++--------+-------------+-------------+---------------------+---------------------------+
+| price  | service_fee | last_review | neighbourhood_group | neighbourhood_group_clean |
+| ---    | ---         | ---         | ---                 | ---                       |
+| f64    | f64         | date        | str                 | str                       |
++======================================================================================+
+| 966.0  | 193.0       | 2021-10-19  | Brooklyn            | Brooklyn                  |
+|--------+-------------+-------------+---------------------+---------------------------|
+| 142.0  | 28.0        | 2022-05-21  | Manhattan           | Manhattan                 |
+|--------+-------------+-------------+---------------------+---------------------------|
+| 620.0  | 124.0       | null        | Manhattan           | Manhattan                 |
+|--------+-------------+-------------+---------------------+---------------------------|
+| ...    | ...         | ...         | ...                 | ...                       |
+|--------+-------------+-------------+---------------------+---------------------------|
+| 1060.0 | 212.0       | 2017-10-05  | Brooklyn            | Brooklyn                  |
+|--------+-------------+-------------+---------------------+---------------------------|
+| 1018.0 | 204.0       | 2019-06-24  | Manhattan           | Manhattan                 |
+|--------+-------------+-------------+---------------------+---------------------------|
+| 291.0  | 58.0        | 2017-07-21  | Manhattan           | Manhattan                 |
++--------+-------------+-------------+---------------------+---------------------------+
+neighbourhood_group_clean value counts:
+shape: (6, 2)
++---------------------------+-------+
+| neighbourhood_group_clean | len   |
+| ---                       | ---   |
+| str                       | u32   |
++===================================+
+| Manhattan                 | 43793 |
+|---------------------------+-------|
+| Brooklyn                  | 41843 |
+|---------------------------+-------|
+| Queens                    | 13267 |
+|---------------------------+-------|
+| Bronx                     | 2712  |
+|---------------------------+-------|
+| Staten Island             | 955   |
+|---------------------------+-------|
+| null                      | 29    |
++---------------------------+-------+
+
+========================================
+Cell 3
+========================================
+Duplicate listings (raw): 1082 rows flagged, saved to /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/polars_reports/raw_duplicate_listings.csv
+shape: (2, 2)
++--------+-------+
+| status | len   |
+| ---    | ---   |
+| str    | u32   |
++================+
+| FAIL   | 4204  |
+|--------+-------|
+| PASS   | 98395 |
++--------+-------+
+Sample failures:
+shape: (10, 3)
++---------+--------+-------------------------------+
+| id      | status | errors                        |
+| ---     | ---    | ---                           |
+| i64     | str    | str                           |
++==================================================+
+| 1004098 | FAIL   | availability_365 out of range |
+|---------+--------+-------------------------------|
+| 1006307 | FAIL   | availability_365 out of range |
+|---------+--------+-------------------------------|
+| 1008516 | FAIL   | invalid neighbourhood_group   |
+|---------+--------+-------------------------------|
+| ...     | ...    | ...                           |
+|---------+--------+-------------------------------|
+| 1011830 | FAIL   | invalid service_fee           |
+|---------+--------+-------------------------------|
+| 1015144 | FAIL   | availability_365 out of range |
+|---------+--------+-------------------------------|
+| 1019562 | FAIL   | availability_365 out of range |
++---------+--------+-------------------------------+
+
+========================================
+Cell 4
+========================================
+GE Validation (raw) Completed
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE.json
+Success %   : 90.48
+Total Expectations: 42
+GE Suite Generated
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_suite.html
+{'evaluated_expectations': 42, 'successful_expectations': 38, 'unsuccessful_expectations': 4, 'success_percent': 90.47619047619048}
+
+========================================
+Cell 5
+========================================
+
+========================================
+Cell 6
+========================================
+
+========================================
+Cell 7
+========================================
+shape: (2, 2)
++--------+-------+
+| status | len   |
+| ---    | ---   |
+| str    | u32   |
++================+
+| FAIL   | 4266  |
+|--------+-------|
+| PASS   | 98333 |
++--------+-------+
+
+========================================
+Cell 8
+========================================
+Cerberus rows: 102599
+
+========================================
+Cell 9
+========================================
+Cerberus rows: 102599
+Suite HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus_suite.html
+Validation JSON Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus.json
+Validation HTML Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus_report.html
+
+========================================
+Cell 10
+========================================
+Pydantic rows: 102599
+Passed: 98845 | Failed: 3754
+
+========================================
+Cell 11
+========================================
+Raw rows: 102599
+Clean rows: 101323
+Rows removed: 1276
+{'total': 102599, 'passed': 98845, 'failed': 3754, 'success_pct': 96.34}
+
+========================================
+Cell 12
+========================================
+DuckDB: {'total': 102599, 'passed': 98845, 'failed': 3754, 'success_pct': 96.34}
+Root cause: {'total': 102599, 'passed': 32942, 'failed': 69657, 'success_pct': 32.11, 'critical_count': 0, 'most_common_root_cause': 'Unverified host identity', 'price_benchmark_used': 624.0}
+
+========================================
+Cell 13
+========================================
+Preprocessing: 102599 -> 98369 rows (4230 dropped)
+  - duplicate id: 541 rows
+  - invalid/missing price or service_fee: 486 rows
+  - negative minimum_nights: 13 rows
+  - availability_365 out of physical range: 3163 rows
+  - lat/long out of range: 0 rows
+  - invalid room_type: 0 rows
+  - invalid cancellation_policy: 0 rows
+  - invalid host_identity_verified: 0 rows
+  - invalid neighbourhood_group after cleaning: 0 rows
+  - has reviews but missing last_review: 27 rows
+  - full duplicate row: 0 rows
+shape: (5, 26)
++----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------+
+| id       | name              | host_id     | host_identity_ver | host_name | neighbourhood_gro | ... | reviews_per_month | review_rate_numbe | calculated_host_ | availability_365 | house_rules      | neighbourhood_gr |
+| ---      | ---               | ---         | ified             | ---       | up                |     | ---               | r                 | listings_count   | ---              | ---              | oup_clean        |
+| i64      | str               | i64         | ---               | str       | ---               |     | f64               | ---               | ---              | i64              | str              | ---              |
+|          |                   |             | str               |           | str               |     |                   | i64               | i64              |                  |                  | str              |
++==========================================================================================================================================================================================================================+
+| 48092091 | New Colorful East | 30525167226 | verified          | Elizabeth | Manhattan         | ... | 0.4               | 3                 | 1                | 98               | null             | Manhattan        |
+|          | Village Mode...   |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+|----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
+| 16707091 | Williamsburg -    | 89301335495 | verified          | Martin    | Brooklyn          | ... | 0.05              | 3                 | 1                | 0                | null             | Brooklyn         |
+|          | great view and    |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+|          | ...               |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+|----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
+| 27268172 | Private room with | 39844375971 | unconfirmed       | Alejandro | Brooklyn          | ... | null              | 3                 | 2                | 0                | No smoking, no   | Brooklyn         |
+|          | a sofa bed i...   |             |                   |           |                   |     |                   |                   |                  |                  | very late        |                  |
+|          |                   |             |                   |           |                   |     |                   |                   |                  |                  | night...         |                  |
+|----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
+| 49819685 | Large room at     | 33044964402 | unconfirmed       | Ozgur     | Manhattan         | ... | 0.09              | 1                 | 1                | 0                | All Renters and  | Manhattan        |
+|          | luxury            |             |                   |           |                   |     |                   |                   |                  |                  | Guests must      |                  |
+|          | apartment...      |             |                   |           |                   |     |                   |                   |                  |                  | be...            |                  |
+|----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
+| 51859329 | Newly renovated,  | 77584353083 | verified          | Katie     | Brooklyn          | ... | null              | 3                 | 1                | 0                | null             | Brooklyn         |
+|          | fully furnish...  |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
++----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------+
+
+========================================
+Cell 14
+========================================
+shape: (1, 2)
++--------+-------+
+| status | len   |
+| ---    | ---   |
+| str    | u32   |
++================+
+| PASS   | 98369 |
++--------+-------+
+GE Validation (clean) Completed
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE.json
+Success %   : 100.0
+Total Expectations: 42
+GE Suite Generated
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_suite.html
+{'evaluated_expectations': 42, 'successful_expectations': 42, 'unsuccessful_expectations': 0, 'success_percent': 100.0}
+Cerberus clean rows: 98369
+Pydantic clean rows: 98369
+{'total': 98369, 'passed': 98369, 'failed': 0, 'success_pct': 100.0}
+{'total': 98369, 'passed': 31509, 'failed': 66860, 'success_pct': 32.03, 'critical_count': 0, 'most_common_root_cause': 'Unverified host identity', 'price_benchmark_used': 625.0}
+
+========================================
+Cell 15
+========================================
+shape: (3, 2)
++------------------------+-------+
+| host_identity_verified | len   |
+| ---                    | ---   |
+| str                    | u32   |
++================================+
+| unconfirmed            | 49088 |
+|------------------------+-------|
+| verified               | 49014 |
+|------------------------+-------|
+| null                   | 267   |
++------------------------+-------+
+Unconfirmed %: 49.9
+
+========================================
+Cell 16
+========================================
+Unverified host identity: 49088 (49.9%)
+Low rating on established listing: 14064 (14.3%)
+Availability conflict: 11944 (12.14%)
+New listing at high price: 9243 (9.4%)
+High-volume host: 3675 (3.74%)
+Excessive minimum stay: 247 (0.25%)
+
+========================================
+Cell 17
+========================================
+price_outlier candidates: 0
+stale_review_data candidates: 0
+
+========================================
+Cell 18
+========================================
+GE Validation (raw) Completed
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE.json
+Success %   : 90.48
+Total Expectations: 42
+GE Suite Generated
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_suite.html
+GE Validation (clean) Completed
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE.json
+Success %   : 100.0
+Total Expectations: 42
+GE Suite Generated
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_suite.html
+All reports + suites regenerated for raw and clean.
+
+========================================
+Cell 19
+========================================
+
+GE:
+  clean_GE.json
+  clean_GE_report.html
+  clean_GE_suite.html
+  raw_GE.json
+  raw_GE_report.html
+  raw_GE_suite.html
+  raw_ge_results.json
+
+cerberus_reports:
+  clean_cerberus.json
+  clean_cerberus_report.html
+  clean_cerberus_suite.html
+  raw_cerberus.json
+  raw_cerberus_report.html
+  raw_cerberus_suite.html
+
+pydantic_reports:
+  clean_pydantic.json
+  clean_pydantic_report.html
+  clean_pydantic_suite.html
+  raw_pydantic.json
+  raw_pydantic_report.html
+  raw_pydantic_suite.html
+
+duckdb_reports:
+  clean_duckdb.json
+  clean_duckdb_report.html
+  clean_duckdb_suite.html
+  raw_duckdb.json
+  raw_duckdb_report.html
+  raw_duckdb_suite.html
+
+========================================
+Cell 20
+========================================
+(98369, 13)
+shape: (1, 13)
++-------+----------------+-------------------+-------------------+-------------------+-------------------+-----+-------------------+------------------+------------------+------------------+------------------+-----------+
+| price | minimum_nights | number_of_reviews | reviews_per_month | review_rate_numbe | calculated_host_l | ... | construction_year | neighbourhood_gr | cancellation_pol | host_identity_ve | instant_bookable | room_type |
+| ---   | ---            | ---               | ---               | r                 | istings_count     |     | ---               | oup_clean        | icy              | rified           | ---              | ---       |
+| u32   | u32            | u32               | u32               | ---               | ---               |     | u32               | ---              | ---              | ---              | u32              | u32       |
+|       |                |                   |                   | u32               | u32               |     |                   | u32              | u32              | u32              |                  |           |
++==========================================================================================================================================================================================================================+
+| 0     | 0              | 0                 | 0                 | 0                 | 0                 | ... | 0                 | 0                | 0                | 0                | 0                | 0         |
++-------+----------------+-------------------+-------------------+-------------------+-------------------+-----+-------------------+------------------+------------------+------------------+------------------+-----------+
+shape: (4, 2)
++-----------------+-------+
+| room_type       | len   |
+| ---             | ---   |
+| str             | u32   |
++=========================+
+| Entire home/apt | 51387 |
+|-----------------+-------|
+| Private room    | 44723 |
+|-----------------+-------|
+| Shared room     | 2146  |
+|-----------------+-------|
+| Hotel room      | 113   |
++-----------------+-------+
+
+========================================
+Cell 21
+========================================
+Train shape: (78695, 22)
+Test shape: (19674, 22)
+Feature columns: ['price', 'minimum_nights', 'number_of_reviews', 'reviews_per_month', 'review_rate_number', 'calculated_host_listings_count', 'availability_365', 'construction_year', 'instant_bookable', 'neighbourhood_group_clean_Bronx', 'neighbourhood_group_clean_Brooklyn', 'neighbourhood_group_clean_Manhattan', 'neighbourhood_group_clean_Queens', 'neighbourhood_group_clean_Staten Island', 'neighbourhood_group_clean_Unknown', 'cancellation_policy_Unknown', 'cancellation_policy_flexible', 'cancellation_policy_moderate', 'cancellation_policy_strict', 'host_identity_verified_Unknown', 'host_identity_verified_unconfirmed', 'host_identity_verified_verified']
+Classes: ['Entire home/apt', 'Hotel room', 'Private room', 'Shared room']
+Train class distribution: [41110    90 35778  1717]
+Test class distribution: [10277    23  8945   429]
+
+========================================
+Cell 22
+========================================
+shape: (8, 11)
++--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
+| feature                        | train_mean  | test_mean   | mean_shift_pct | train_std  | test_std   | std_shift_pct | ks_stat  | p_value  | status   | drifted |
+| ---                            | ---         | ---         | ---            | ---        | ---        | ---           | ---      | ---      | ---      | ---     |
+| str                            | f64         | f64         | f64            | f64        | f64        | f64           | f64      | f64      | str      | i64     |
++==================================================================================================================================================================+
+| availability_365               | 134.718623  | 132.805886  | -1.42          | 129.568705 | 129.425239 | -0.111        | 0.008928 | 0.161668 | No Drift | 0       |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| minimum_nights                 | 7.975818    | 7.8589      | -1.466         | 18.421779  | 17.413777  | -5.472        | 0.005483 | 0.729057 | No Drift | 0       |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| price                          | 625.92903   | 624.81224   | -0.178         | 331.722878 | 331.387564 | -0.101        | 0.00463  | 0.887019 | No Drift | 0       |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| ...                            | ...         | ...         | ...            | ...        | ...        | ...           | ...      | ...      | ...      | ...     |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| construction_year              | 2012.492446 | 2012.487547 | -0.0           | 5.761756   | 5.753402   | -0.145        | 0.004033 | 0.959077 | No Drift | 0       |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| review_rate_number             | 3.286664    | 3.285453    | -0.037         | 1.275825   | 1.283034   | 0.565         | 0.002968 | 0.999026 | No Drift | 0       |
+|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| calculated_host_listings_count | 8.026037    | 7.978957    | -0.587         | 32.640524  | 32.560908  | -0.244        | 0.002263 | 0.999998 | No Drift | 0       |
++--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
+
+========================================
+Cell 23
+========================================
+
+========================================
+Cell 24
+========================================
+Feature count   : 22
+Classes         : ['Entire home/apt', 'Hotel room', 'Private room', 'Shared room']
+
+========================================
+Cell 25
+========================================
+===== Logistic Regression =====
+Accuracy: 0.3388228118328759
+Precision: 0.5521937105679231
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.61      0.30      0.40     10277
+           1       0.00      0.74      0.01        23
+           2       0.51      0.39      0.44      8945
+           3       0.03      0.31      0.06       429
+
+    accuracy                           0.34     19674
+   macro avg       0.29      0.43      0.23     19674
+weighted avg       0.55      0.34      0.41     19674
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_logistic.pkl']
+
+========================================
+Cell 26
+========================================
+===== Random Forest =====
+Accuracy: 0.5556063840601809
+Precision: 0.6479110171213279
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.68      0.70      0.69     10277
+           1       0.04      0.78      0.08        23
+           2       0.64      0.39      0.48      8945
+           3       0.08      0.61      0.14       429
+
+    accuracy                           0.56     19674
+   macro avg       0.36      0.62      0.35     19674
+weighted avg       0.65      0.56      0.58     19674
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_rf.pkl']
+
+========================================
+Cell 27
+========================================
+===== XGBoost =====
+Accuracy: 0.5884415980481854
+Precision: 0.6669376049625272
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.68      0.70     10277
+           1       0.07      0.74      0.13        23
+           2       0.65      0.48      0.55      8945
+           3       0.09      0.66      0.17       429
+
+    accuracy                           0.59     19674
+   macro avg       0.38      0.64      0.39     19674
+weighted avg       0.67      0.59      0.62     19674
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_xgb.pkl']
+
+========================================
+Cell 28
+========================================
+===== LightGBM =====
+Accuracy: 0.6027752363525465
+Precision: 0.6716753961599117
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.69      0.70     10277
+           1       0.10      0.61      0.17        23
+           2       0.65      0.50      0.57      8945
+           3       0.11      0.67      0.18       429
+
+    accuracy                           0.60     19674
+   macro avg       0.39      0.62      0.40     19674
+weighted avg       0.67      0.60      0.63     19674
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_lgb.pkl']
+
+========================================
+Cell 29
+========================================
+===== SVM =====
+Accuracy: 0.4952729490698384
+Precision: 0.5950122448818176
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.66      0.52      0.58     10277
+           1       0.02      0.26      0.04        23
+           2       0.54      0.47      0.50      8945
+           3       0.06      0.52      0.11       429
+
+    accuracy                           0.50     19674
+   macro avg       0.32      0.44      0.31     19674
+weighted avg       0.60      0.50      0.54     19674
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_svc.pkl']
+
+========================================
+Cell 30
+========================================
+===== MODEL COMPARISON =====
+shape: (5, 2)
++---------------------+----------+
+| model               | accuracy |
+| ---                 | ---      |
+| str                 | f64      |
++================================+
+| LightGBM            | 0.602775 |
+|---------------------+----------|
+| XGBoost             | 0.588442 |
+|---------------------+----------|
+| Random Forest       | 0.555606 |
+|---------------------+----------|
+| SVM                 | 0.495273 |
+|---------------------+----------|
+| Logistic Regression | 0.338823 |
++---------------------+----------+
+
+===== BEST MODEL =====
+Model   : LightGBM
+Accuracy: 0.6028
+
+========================================
+Cell 31
+========================================
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Shared room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Shared room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Shared room.png']
+
+========================================
+Cell 32
+========================================
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Shared room.png']
+
+========================================
+Cell 33
+========================================
+/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/xai_report.docx
+
+========================================
+Cell 34
+========================================
