@@ -83,61 +83,119 @@ shape: (6, 2)
 ========================================
 Cell 3
 ========================================
-Duplicate listings (raw): 1082 rows flagged, saved to /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/polars_reports/raw_duplicate_listings.csv
+
+========================================
+Cell 4
+========================================
+RULES, _rule, _contract_errors, _domain_warnings loaded successfully.
+
+========================================
+Cell 5
+========================================
+_escape, _write_json, _write_html_report loaded successfully.
+
+========================================
+Cell 6
+========================================
+Duplicate listings (raw): 1082 rows flagged (across all duplicate groups), saved to /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/raw_duplicate_listings.csv
 shape: (2, 2)
 +--------+-------+
 | status | len   |
 | ---    | ---   |
 | str    | u32   |
 +================+
-| FAIL   | 4204  |
+| FAIL   | 4266  |
 |--------+-------|
-| PASS   | 98395 |
+| PASS   | 98333 |
 +--------+-------+
 Sample failures:
-shape: (10, 3)
-+---------+--------+-------------------------------+
-| id      | status | errors                        |
-| ---     | ---    | ---                           |
-| i64     | str    | str                           |
-+==================================================+
-| 1004098 | FAIL   | availability_365 out of range |
-|---------+--------+-------------------------------|
-| 1006307 | FAIL   | availability_365 out of range |
-|---------+--------+-------------------------------|
-| 1008516 | FAIL   | invalid neighbourhood_group   |
-|---------+--------+-------------------------------|
-| ...     | ...    | ...                           |
-|---------+--------+-------------------------------|
-| 1011830 | FAIL   | invalid service_fee           |
-|---------+--------+-------------------------------|
-| 1015144 | FAIL   | availability_365 out of range |
-|---------+--------+-------------------------------|
-| 1019562 | FAIL   | availability_365 out of range |
-+---------+--------+-------------------------------+
-
-========================================
-Cell 4
-========================================
-GE Validation (raw) Completed
-HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_report.html
-JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE.json
-Success %   : 90.48
-Total Expectations: 42
-GE Suite Generated
-HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_suite.html
-{'evaluated_expectations': 42, 'successful_expectations': 38, 'unsuccessful_expectations': 4, 'success_percent': 90.47619047619048}
-
-========================================
-Cell 5
-========================================
-
-========================================
-Cell 6
-========================================
+shape: (10, 7)
++---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------+
+| id      | price  | room_type       | neighbourhood_group | status | reason                        | warnings               |
+| ---     | ---    | ---             | ---                 | ---    | ---                           | ---                    |
+| i64     | f64    | str             | str                 | str    | str                           | list[str]              |
++============================================================================================================================+
+| 1004098 | 577.0  | Entire home/apt | Manhattan           | FAIL   | availability_365 out of range | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1006307 | 291.0  | Private room    | Manhattan           | FAIL   | availability_365 out of range | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1008516 | 580.0  | Private room    | brookln             | FAIL   | Invalid neighbourhood_group   | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| ...     | ...    | ...             | ...                 | ...    | ...                           | ...                    |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1011830 | 1095.0 | Entire home/apt | Brooklyn            | FAIL   | Invalid service_fee           | ["premium price tier"] |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1015144 | 1175.0 | Entire home/apt | Brooklyn            | FAIL   | availability_365 out of range | ["premium price tier"] |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1019562 | 858.0  | Private room    | Brooklyn            | FAIL   | availability_365 out of range | []                     |
++---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------+
 
 ========================================
 Cell 7
+========================================
+True
+True
+True
+True
+
+========================================
+Cell 8
+========================================
+Duplicate listings (raw): 1082 rows flagged (across all duplicate groups), saved to /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/raw_duplicate_listings.csv
+shape: (2, 2)
++--------+-------+
+| status | len   |
+| ---    | ---   |
+| str    | u32   |
++================+
+| FAIL   | 4266  |
+|--------+-------|
+| PASS   | 98333 |
++--------+-------+
+Sample failures:
+shape: (10, 7)
++---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------+
+| id      | price  | room_type       | neighbourhood_group | status | reason                        | warnings               |
+| ---     | ---    | ---             | ---                 | ---    | ---                           | ---                    |
+| i64     | f64    | str             | str                 | str    | str                           | list[str]              |
++============================================================================================================================+
+| 1004098 | 577.0  | Entire home/apt | Manhattan           | FAIL   | availability_365 out of range | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1006307 | 291.0  | Private room    | Manhattan           | FAIL   | availability_365 out of range | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1008516 | 580.0  | Private room    | brookln             | FAIL   | Invalid neighbourhood_group   | []                     |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| ...     | ...    | ...             | ...                 | ...    | ...                           | ...                    |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1011830 | 1095.0 | Entire home/apt | Brooklyn            | FAIL   | Invalid service_fee           | ["premium price tier"] |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1015144 | 1175.0 | Entire home/apt | Brooklyn            | FAIL   | availability_365 out of range | ["premium price tier"] |
+|---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------|
+| 1019562 | 858.0  | Private room    | Brooklyn            | FAIL   | availability_365 out of range | []                     |
++---------+--------+-----------------+---------------------+--------+-------------------------------+------------------------+
+
+========================================
+Cell 9
+========================================
+GE Validation (raw) Completed
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/raw_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/raw_GE.json
+Success %   : 90.48
+Total Expectations: 42
+GE Suite Generated
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/raw_GE_suite.html
+{'evaluated_expectations': 42, 'successful_expectations': 38, 'unsuccessful_expectations': 4, 'success_percent': 90.47619047619048}
+
+========================================
+Cell 10
+========================================
+
+========================================
+Cell 11
+========================================
+
+========================================
+Cell 12
 ========================================
 shape: (2, 2)
 +--------+-------+
@@ -151,52 +209,52 @@ shape: (2, 2)
 +--------+-------+
 
 ========================================
-Cell 8
+Cell 13
 ========================================
 Cerberus rows: 102599
 
 ========================================
-Cell 9
+Cell 14
 ========================================
 Cerberus rows: 102599
-Suite HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus_suite.html
-Validation JSON Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus.json
-Validation HTML Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/cerberus_reports/raw_cerberus_report.html
+Suite HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/cerberus/raw_cerberus_suite.html
+Validation JSON Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/raw_cerberus.json
+Validation HTML Report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/cerberus/raw_cerberus_report.html
 
 ========================================
-Cell 10
+Cell 15
 ========================================
 Pydantic rows: 102599
 Passed: 98845 | Failed: 3754
 
 ========================================
-Cell 11
+Cell 16
 ========================================
 Raw rows: 102599
-Clean rows: 101323
-Rows removed: 1276
+Clean rows: 101864
+Rows removed: 735
 {'total': 102599, 'passed': 98845, 'failed': 3754, 'success_pct': 96.34}
 
 ========================================
-Cell 12
+Cell 17
 ========================================
 DuckDB: {'total': 102599, 'passed': 98845, 'failed': 3754, 'success_pct': 96.34}
 Root cause: {'total': 102599, 'passed': 32942, 'failed': 69657, 'success_pct': 32.11, 'critical_count': 0, 'most_common_root_cause': 'Unverified host identity', 'price_benchmark_used': 624.0}
 
 ========================================
-Cell 13
+Cell 18
 ========================================
-Preprocessing: 102599 -> 98369 rows (4230 dropped)
+Preprocessing: 102599 -> 101097 rows (1502 dropped)
   - duplicate id: 541 rows
   - invalid/missing price or service_fee: 486 rows
   - negative minimum_nights: 13 rows
-  - availability_365 out of physical range: 3163 rows
+  - negative availability_365: 429 rows
   - lat/long out of range: 0 rows
   - invalid room_type: 0 rows
   - invalid cancellation_policy: 0 rows
   - invalid host_identity_verified: 0 rows
   - invalid neighbourhood_group after cleaning: 0 rows
-  - has reviews but missing last_review: 27 rows
+  - has reviews but missing last_review: 33 rows
   - full duplicate row: 0 rows
 shape: (5, 26)
 +----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------+
@@ -205,51 +263,52 @@ shape: (5, 26)
 | i64      | str               | i64         | ---               | str       | ---               |     | f64               | ---               | ---              | i64              | str              | ---              |
 |          |                   |             | str               |           | str               |     |                   | i64               | i64              |                  |                  | str              |
 +==========================================================================================================================================================================================================================+
-| 48092091 | New Colorful East | 30525167226 | verified          | Elizabeth | Manhattan         | ... | 0.4               | 3                 | 1                | 98               | null             | Manhattan        |
-|          | Village Mode...   |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+| 6674009  | Your own West     | 27465541017 | verified          | Braden    | Manhattan         | ... | null              | 4                 | 1                | 145              | Smoking is       | Manhattan        |
+|          | Village flat!     |             |                   |           |                   |     |                   |                   |                  |                  | strictly         |                  |
+|          |                   |             |                   |           |                   |     |                   |                   |                  |                  | prohibited...    |                  |
 |----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
-| 16707091 | Williamsburg -    | 89301335495 | verified          | Martin    | Brooklyn          | ... | 0.05              | 3                 | 1                | 0                | null             | Brooklyn         |
-|          | great view and    |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
-|          | ...               |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+| 56234098 | Cozy home away    | 3142353199  | unconfirmed       | Roger     | Queens            | ... | 0.83              | 3                 | 1                | 73               | No pets. No      | Queens           |
+|          | from home         |             |                   |           |                   |     |                   |                   |                  |                  | smoking. Please  |                  |
+|          |                   |             |                   |           |                   |     |                   |                   |                  |                  | :)               |                  |
 |----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
-| 27268172 | Private room with | 39844375971 | unconfirmed       | Alejandro | Brooklyn          | ... | null              | 3                 | 2                | 0                | No smoking, no   | Brooklyn         |
-|          | a sofa bed i...   |             |                   |           |                   |     |                   |                   |                  |                  | very late        |                  |
-|          |                   |             |                   |           |                   |     |                   |                   |                  |                  | night...         |                  |
+| 34575653 | Modern & Cozy 1BD | 79797503196 | verified          | Natasha   | Manhattan         | ... | 0.89              | 4                 | 2                | 317              | null             | Manhattan        |
+|          | Garden Apt        |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
 |----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
-| 49819685 | Large room at     | 33044964402 | unconfirmed       | Ozgur     | Manhattan         | ... | 0.09              | 1                 | 1                | 0                | All Renters and  | Manhattan        |
-|          | luxury            |             |                   |           |                   |     |                   |                   |                  |                  | Guests must      |                  |
-|          | apartment...      |             |                   |           |                   |     |                   |                   |                  |                  | be...            |                  |
+| 25899020 | Private Sunny     | 73678617132 | unconfirmed       | Lester    | Manhattan         | ... | 1.61              | 4                 | 3                | 180              | These are my     | Manhattan        |
+|          | Uptown            |             |                   |           |                   |     |                   |                   |                  |                  | rules. I know    |                  |
+|          | Manhattan...      |             |                   |           |                   |     |                   |                   |                  |                  | thi...           |                  |
 |----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------|
-| 51859329 | Newly renovated,  | 77584353083 | verified          | Katie     | Brooklyn          | ... | null              | 3                 | 1                | 0                | null             | Brooklyn         |
-|          | fully furnish...  |             |                   |           |                   |     |                   |                   |                  |                  |                  |                  |
+| 45785686 | Beautiful Room in | 22257719362 | verified          | Gabriella | Manhattan         | ... | 0.24              | 1                 | 1                | 0                | Please remember  | Manhattan        |
+|          | Manhattan- G...   |             |                   |           |                   |     |                   |                   |                  |                  | that this is     |                  |
+|          |                   |             |                   |           |                   |     |                   |                   |                  |                  | a...             |                  |
 +----------+-------------------+-------------+-------------------+-----------+-------------------+-----+-------------------+-------------------+------------------+------------------+------------------+------------------+
 
 ========================================
-Cell 14
+Cell 19
 ========================================
 shape: (1, 2)
-+--------+-------+
-| status | len   |
-| ---    | ---   |
-| str    | u32   |
-+================+
-| PASS   | 98369 |
-+--------+-------+
++--------+--------+
+| status | len    |
+| ---    | ---    |
+| str    | u32    |
++=================+
+| PASS   | 101097 |
++--------+--------+
 GE Validation (clean) Completed
-HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_report.html
-JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE.json
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/clean_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/clean_GE.json
 Success %   : 100.0
 Total Expectations: 42
 GE Suite Generated
-HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_suite.html
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/clean_GE_suite.html
 {'evaluated_expectations': 42, 'successful_expectations': 42, 'unsuccessful_expectations': 0, 'success_percent': 100.0}
-Cerberus clean rows: 98369
-Pydantic clean rows: 98369
-{'total': 98369, 'passed': 98369, 'failed': 0, 'success_pct': 100.0}
-{'total': 98369, 'passed': 31509, 'failed': 66860, 'success_pct': 32.03, 'critical_count': 0, 'most_common_root_cause': 'Unverified host identity', 'price_benchmark_used': 625.0}
+Cerberus clean rows: 101097
+Pydantic clean rows: 101097
+{'total': 101097, 'passed': 101097, 'failed': 0, 'success_pct': 100.0}
+{'total': 101097, 'passed': 32428, 'failed': 68669, 'success_pct': 32.08, 'critical_count': 0, 'most_common_root_cause': 'Unverified host identity', 'price_benchmark_used': 625.0}
 
 ========================================
-Cell 15
+Cell 20
 ========================================
 shape: (3, 2)
 +------------------------+-------+
@@ -257,90 +316,65 @@ shape: (3, 2)
 | ---                    | ---   |
 | str                    | u32   |
 +================================+
-| unconfirmed            | 49088 |
+| unconfirmed            | 50472 |
 |------------------------+-------|
-| verified               | 49014 |
+| verified               | 50347 |
 |------------------------+-------|
-| null                   | 267   |
+| null                   | 278   |
 +------------------------+-------+
-Unconfirmed %: 49.9
+Unconfirmed %: 49.92
 
 ========================================
-Cell 16
+Cell 21
 ========================================
-Unverified host identity: 49088 (49.9%)
-Low rating on established listing: 14064 (14.3%)
-Availability conflict: 11944 (12.14%)
-New listing at high price: 9243 (9.4%)
-High-volume host: 3675 (3.74%)
-Excessive minimum stay: 247 (0.25%)
+Unverified host identity: 50472 (49.92%)
+Low rating on established listing: 14578 (14.42%)
+Availability conflict: 11944 (11.81%)
+New listing at high price: 9546 (9.44%)
+High-volume host: 3744 (3.7%)
+Excessive minimum stay: 255 (0.25%)
 
 ========================================
-Cell 17
+Cell 22
 ========================================
 price_outlier candidates: 0
 stale_review_data candidates: 0
 
 ========================================
-Cell 18
+Cell 23
 ========================================
 GE Validation (raw) Completed
-HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_report.html
-JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE.json
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/raw_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/raw_GE.json
 Success %   : 90.48
 Total Expectations: 42
 GE Suite Generated
-HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/raw_GE_suite.html
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/raw_GE_suite.html
 GE Validation (clean) Completed
-HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_report.html
-JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE.json
+HTML Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/clean_GE_report.html
+JSON Report : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/clean_GE.json
 Success %   : 100.0
 Total Expectations: 42
 GE Suite Generated
-HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/GE/clean_GE_suite.html
+HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/html/GE/clean_GE_suite.html
 All reports + suites regenerated for raw and clean.
 
 ========================================
-Cell 19
+Cell 24
 ========================================
 
-GE:
-  clean_GE.json
-  clean_GE_report.html
-  clean_GE_suite.html
-  raw_GE.json
-  raw_GE_report.html
-  raw_GE_suite.html
-  raw_ge_results.json
+GE: MISSING DIRECTORY
 
-cerberus_reports:
-  clean_cerberus.json
-  clean_cerberus_report.html
-  clean_cerberus_suite.html
-  raw_cerberus.json
-  raw_cerberus_report.html
-  raw_cerberus_suite.html
+cerberus_reports: MISSING DIRECTORY
 
-pydantic_reports:
-  clean_pydantic.json
-  clean_pydantic_report.html
-  clean_pydantic_suite.html
-  raw_pydantic.json
-  raw_pydantic_report.html
-  raw_pydantic_suite.html
+pydantic_reports: MISSING DIRECTORY
 
-duckdb_reports:
-  clean_duckdb.json
-  clean_duckdb_report.html
-  clean_duckdb_suite.html
-  raw_duckdb.json
-  raw_duckdb_report.html
-  raw_duckdb_suite.html
+duckdb_reports: MISSING DIRECTORY
 
 ========================================
-Cell 20
+Cell 25
 ========================================
-(98369, 13)
+(98795, 13)
 shape: (1, 13)
 +-------+----------------+-------------------+-------------------+-------------------+-------------------+-----+-------------------+------------------+------------------+------------------+------------------+-----------+
 | price | minimum_nights | number_of_reviews | reviews_per_month | review_rate_numbe | calculated_host_l | ... | construction_year | neighbourhood_gr | cancellation_pol | host_identity_ve | instant_bookable | room_type |
@@ -350,172 +384,154 @@ shape: (1, 13)
 +==========================================================================================================================================================================================================================+
 | 0     | 0              | 0                 | 0                 | 0                 | 0                 | ... | 0                 | 0                | 0                | 0                | 0                | 0         |
 +-------+----------------+-------------------+-------------------+-------------------+-------------------+-----+-------------------+------------------+------------------+------------------+------------------+-----------+
-shape: (4, 2)
+shape: (2, 2)
 +-----------------+-------+
 | room_type       | len   |
 | ---             | ---   |
 | str             | u32   |
 +=========================+
-| Entire home/apt | 51387 |
+| Entire home/apt | 52912 |
 |-----------------+-------|
-| Private room    | 44723 |
-|-----------------+-------|
-| Shared room     | 2146  |
-|-----------------+-------|
-| Hotel room      | 113   |
+| Private room    | 45883 |
 +-----------------+-------+
-
-========================================
-Cell 21
-========================================
-Train shape: (78695, 22)
-Test shape: (19674, 22)
-Feature columns: ['price', 'minimum_nights', 'number_of_reviews', 'reviews_per_month', 'review_rate_number', 'calculated_host_listings_count', 'availability_365', 'construction_year', 'instant_bookable', 'neighbourhood_group_clean_Bronx', 'neighbourhood_group_clean_Brooklyn', 'neighbourhood_group_clean_Manhattan', 'neighbourhood_group_clean_Queens', 'neighbourhood_group_clean_Staten Island', 'neighbourhood_group_clean_Unknown', 'cancellation_policy_Unknown', 'cancellation_policy_flexible', 'cancellation_policy_moderate', 'cancellation_policy_strict', 'host_identity_verified_Unknown', 'host_identity_verified_unconfirmed', 'host_identity_verified_verified']
-Classes: ['Entire home/apt', 'Hotel room', 'Private room', 'Shared room']
-Train class distribution: [41110    90 35778  1717]
-Test class distribution: [10277    23  8945   429]
-
-========================================
-Cell 22
-========================================
-shape: (8, 11)
-+--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
-| feature                        | train_mean  | test_mean   | mean_shift_pct | train_std  | test_std   | std_shift_pct | ks_stat  | p_value  | status   | drifted |
-| ---                            | ---         | ---         | ---            | ---        | ---        | ---           | ---      | ---      | ---      | ---     |
-| str                            | f64         | f64         | f64            | f64        | f64        | f64           | f64      | f64      | str      | i64     |
-+==================================================================================================================================================================+
-| availability_365               | 134.718623  | 132.805886  | -1.42          | 129.568705 | 129.425239 | -0.111        | 0.008928 | 0.161668 | No Drift | 0       |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| minimum_nights                 | 7.975818    | 7.8589      | -1.466         | 18.421779  | 17.413777  | -5.472        | 0.005483 | 0.729057 | No Drift | 0       |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| price                          | 625.92903   | 624.81224   | -0.178         | 331.722878 | 331.387564 | -0.101        | 0.00463  | 0.887019 | No Drift | 0       |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| ...                            | ...         | ...         | ...            | ...        | ...        | ...           | ...      | ...      | ...      | ...     |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| construction_year              | 2012.492446 | 2012.487547 | -0.0           | 5.761756   | 5.753402   | -0.145        | 0.004033 | 0.959077 | No Drift | 0       |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| review_rate_number             | 3.286664    | 3.285453    | -0.037         | 1.275825   | 1.283034   | 0.565         | 0.002968 | 0.999026 | No Drift | 0       |
-|--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
-| calculated_host_listings_count | 8.026037    | 7.978957    | -0.587         | 32.640524  | 32.560908  | -0.244        | 0.002263 | 0.999998 | No Drift | 0       |
-+--------------------------------+-------------+-------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
-
-========================================
-Cell 23
-========================================
-
-========================================
-Cell 24
-========================================
-Feature count   : 22
-Classes         : ['Entire home/apt', 'Hotel room', 'Private room', 'Shared room']
-
-========================================
-Cell 25
-========================================
-===== Logistic Regression =====
-Accuracy: 0.3388228118328759
-Precision: 0.5521937105679231
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.61      0.30      0.40     10277
-           1       0.00      0.74      0.01        23
-           2       0.51      0.39      0.44      8945
-           3       0.03      0.31      0.06       429
-
-    accuracy                           0.34     19674
-   macro avg       0.29      0.43      0.23     19674
-weighted avg       0.55      0.34      0.41     19674
-
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_logistic.pkl']
 
 ========================================
 Cell 26
 ========================================
-===== Random Forest =====
-Accuracy: 0.5556063840601809
-Precision: 0.6479110171213279
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.68      0.70      0.69     10277
-           1       0.04      0.78      0.08        23
-           2       0.64      0.39      0.48      8945
-           3       0.08      0.61      0.14       429
-
-    accuracy                           0.56     19674
-   macro avg       0.36      0.62      0.35     19674
-weighted avg       0.65      0.56      0.58     19674
-
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_rf.pkl']
+Train shape: (79036, 22)
+Test shape: (19759, 22)
+Feature columns: ['price', 'minimum_nights', 'number_of_reviews', 'reviews_per_month', 'review_rate_number', 'calculated_host_listings_count', 'availability_365', 'construction_year', 'instant_bookable', 'neighbourhood_group_clean_Bronx', 'neighbourhood_group_clean_Brooklyn', 'neighbourhood_group_clean_Manhattan', 'neighbourhood_group_clean_Queens', 'neighbourhood_group_clean_Staten Island', 'neighbourhood_group_clean_Unknown', 'cancellation_policy_Unknown', 'cancellation_policy_flexible', 'cancellation_policy_moderate', 'cancellation_policy_strict', 'host_identity_verified_Unknown', 'host_identity_verified_unconfirmed', 'host_identity_verified_verified']
+Classes: ['Entire home/apt', 'Private room']
+Train class distribution: [42330 36706]
+Test class distribution: [10582  9177]
 
 ========================================
 Cell 27
 ========================================
-===== XGBoost =====
-Accuracy: 0.5884415980481854
-Precision: 0.6669376049625272
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.71      0.68      0.70     10277
-           1       0.07      0.74      0.13        23
-           2       0.65      0.48      0.55      8945
-           3       0.09      0.66      0.17       429
-
-    accuracy                           0.59     19674
-   macro avg       0.38      0.64      0.39     19674
-weighted avg       0.67      0.59      0.62     19674
-
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_xgb.pkl']
+shape: (8, 11)
++--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
+| feature            | train_mean  | test_mean  | mean_shift_pct | train_std  | test_std   | std_shift_pct | ks_stat  | p_value  | status   | drifted |
+| ---                | ---         | ---        | ---            | ---        | ---        | ---           | ---      | ---      | ---      | ---     |
+| str                | f64         | f64        | f64            | f64        | f64        | f64           | f64      | f64      | str      | i64     |
++=====================================================================================================================================================+
+| price              | 626.029025  | 621.476947 | -0.727         | 331.478525 | 331.638071 | 0.048         | 0.011653 | 0.027118 | Drift    | 1       |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| review_rate_number | 3.282681    | 3.260286   | -0.682         | 1.283099   | 1.283459   | 0.028         | 0.0083   | 0.224986 | No Drift | 0       |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| availability_365   | 139.641834  | 140.365656 | 0.518          | 132.73608  | 132.312754 | -0.319        | 0.007022 | 0.414934 | No Drift | 0       |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| ...                | ...         | ...        | ...            | ...        | ...        | ...           | ...      | ...      | ...      | ...     |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| number_of_reviews  | 27.602143   | 27.166102  | -1.58          | 49.311453  | 49.131956  | -0.364        | 0.005504 | 0.72237  | No Drift | 0       |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| construction_year  | 2012.481553 | 2012.52113 | 0.002          | 5.763978   | 5.73631    | -0.48         | 0.004947 | 0.832012 | No Drift | 0       |
+|--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------|
+| minimum_nights     | 7.967787    | 7.971254   | 0.044          | 18.143751  | 18.765458  | 3.427         | 0.004593 | 0.891098 | No Drift | 0       |
++--------------------+-------------+------------+----------------+------------+------------+---------------+----------+----------+----------+---------+
 
 ========================================
 Cell 28
 ========================================
-===== LightGBM =====
-Accuracy: 0.6027752363525465
-Precision: 0.6716753961599117
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.71      0.69      0.70     10277
-           1       0.10      0.61      0.17        23
-           2       0.65      0.50      0.57      8945
-           3       0.11      0.67      0.18       429
-
-    accuracy                           0.60     19674
-   macro avg       0.39      0.62      0.40     19674
-weighted avg       0.67      0.60      0.63     19674
-
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_lgb.pkl']
+Feature count   : 22
+Classes         : ['Entire home/apt', 'Private room']
 
 ========================================
 Cell 29
 ========================================
-===== SVM =====
-Accuracy: 0.4952729490698384
-Precision: 0.5950122448818176
+===== Logistic Regression =====
+Accuracy: 0.5675894529075358
+Precision: 0.5718296872683082
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.66      0.52      0.58     10277
-           1       0.02      0.26      0.04        23
-           2       0.54      0.47      0.50      8945
-           3       0.06      0.52      0.11       429
+           0       0.61      0.54      0.57     10582
+           1       0.53      0.59      0.56      9177
 
-    accuracy                           0.50     19674
-   macro avg       0.32      0.44      0.31     19674
-weighted avg       0.60      0.50      0.54     19674
+    accuracy                           0.57     19759
+   macro avg       0.57      0.57      0.57     19759
+weighted avg       0.57      0.57      0.57     19759
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_logistic.pkl']
+
+========================================
+Cell 30
+========================================
+===== Random Forest =====
+Accuracy: 0.6689609798066704
+Precision: 0.6725587135657318
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.65      0.68     10582
+           1       0.63      0.69      0.66      9177
+
+    accuracy                           0.67     19759
+   macro avg       0.67      0.67      0.67     19759
+weighted avg       0.67      0.67      0.67     19759
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_rf.pkl']
+
+========================================
+Cell 31
+========================================
+===== XGBoost =====
+Accuracy: 0.6880915026064072
+Precision: 0.6882613010913625
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.71      0.71     10582
+           1       0.66      0.67      0.67      9177
+
+    accuracy                           0.69     19759
+   macro avg       0.69      0.69      0.69     19759
+weighted avg       0.69      0.69      0.69     19759
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_xgb.pkl']
+
+========================================
+Cell 32
+========================================
+===== LightGBM =====
+Accuracy: 0.6865732071461106
+Precision: 0.6866888398893274
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.71      0.71      0.71     10582
+           1       0.66      0.67      0.66      9177
+
+    accuracy                           0.69     19759
+   macro avg       0.69      0.69      0.69     19759
+weighted avg       0.69      0.69      0.69     19759
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_lgb.pkl']
+
+========================================
+Cell 33
+========================================
+===== SVM =====
+Accuracy: 0.6139986841439344
+Precision: 0.6159497846083368
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.65      0.61      0.63     10582
+           1       0.58      0.62      0.60      9177
+
+    accuracy                           0.61     19759
+   macro avg       0.61      0.61      0.61     19759
+weighted avg       0.62      0.61      0.61     19759
 
 ['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_svc.pkl']
 
 ========================================
-Cell 30
+Cell 34
 ========================================
 ===== MODEL COMPARISON =====
 shape: (5, 2)
@@ -524,36 +540,941 @@ shape: (5, 2)
 | ---                 | ---      |
 | str                 | f64      |
 +================================+
-| LightGBM            | 0.602775 |
+| XGBoost             | 0.688092 |
 |---------------------+----------|
-| XGBoost             | 0.588442 |
+| LightGBM            | 0.686573 |
 |---------------------+----------|
-| Random Forest       | 0.555606 |
+| Random Forest       | 0.668961 |
 |---------------------+----------|
-| SVM                 | 0.495273 |
+| SVM                 | 0.613999 |
 |---------------------+----------|
-| Logistic Regression | 0.338823 |
+| Logistic Regression | 0.567589 |
 +---------------------+----------+
 
 ===== BEST MODEL =====
-Model   : LightGBM
-Accuracy: 0.6028
+Model   : XGBoost
+Accuracy: 0.6881
 
 ========================================
-Cell 31
+Cell 35
 ========================================
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_class_Shared room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Shared room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_bar_Shared room.png']
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Best params: {'subsample': 1.0, 'n_estimators': 700, 'min_child_weight': 5, 'max_depth': 10, 'learning_rate': 0.08, 'gamma': 0, 'colsample_bytree': 0.7}
+Best CV accuracy: 0.740917297030494
+
+===== Tuned XGBoost =====
+Accuracy: 0.7640568854699125
+Precision (weighted): 0.7640270360151815
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.78      0.78      0.78     10582
+           1       0.75      0.75      0.75      9177
+
+    accuracy                           0.76     19759
+   macro avg       0.76      0.76      0.76     19759
+weighted avg       0.76      0.76      0.76     19759
+
+['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/models/room_type_xgb.pkl']
 
 ========================================
-Cell 32
+Cell 36
 ========================================
-['/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Entire home_apt.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Hotel room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Private room.png', '/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_class_Shared room.png']
+===== MODEL COMPARISON =====
+shape: (6, 2)
++---------------------+----------+
+| model               | accuracy |
+| ---                 | ---      |
+| str                 | f64      |
++================================+
+| XGBoost (tuned)     | 0.764057 |
+|---------------------+----------|
+| XGBoost (untuned)   | 0.688092 |
+|---------------------+----------|
+| LightGBM            | 0.686573 |
+|---------------------+----------|
+| Random Forest       | 0.668961 |
+|---------------------+----------|
+| SVM                 | 0.613999 |
+|---------------------+----------|
+| Logistic Regression | 0.567589 |
++---------------------+----------+
+
+===== BEST MODEL =====
+Model   : XGBoost (tuned)
+Accuracy: 0.7641
 
 ========================================
-Cell 33
+Cell 37
 ========================================
-/Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/xai_report.docx
+Preprocessing: 102599 -> 101097 rows (1502 dropped)
+  - duplicate id: 541 rows
+  - invalid/missing price or service_fee: 486 rows
+  - negative minimum_nights: 13 rows
+  - negative availability_365: 429 rows
+  - lat/long out of range: 0 rows
+  - invalid room_type: 0 rows
+  - invalid cancellation_policy: 0 rows
+  - invalid host_identity_verified: 0 rows
+  - invalid neighbourhood_group after cleaning: 0 rows
+  - has reviews but missing last_review: 33 rows
+  - full duplicate row: 0 rows
+Clean rows after preprocess_dataset: 101097
 
 ========================================
-Cell 34
+Cell 38
 ========================================
+Preprocessing: 102599 -> 101097 rows (1502 dropped)
+  - duplicate id: 0 rows
+  - invalid/missing price or service_fee: 486 rows
+  - negative minimum_nights: 13 rows
+  - negative availability_365: 429 rows
+  - lat/long out of range: 0 rows
+  - invalid room_type: 0 rows
+  - invalid cancellation_policy: 0 rows
+  - invalid host_identity_verified: 0 rows
+  - invalid neighbourhood_group after cleaning: 0 rows
+  - has reviews but missing last_review: 33 rows
+  - full duplicate row: 0 rows
+
+Full audit of 961 dropped rows saved to: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/dropped_rows_audit.csv
+
+========================================
+Cell 39
+========================================
+shap_values.values shape: (19759, 22)
+                                feature  mean_abs_shap
+         calculated_host_listings_count       0.530604
+                         minimum_nights       0.401803
+    neighbourhood_group_clean_Manhattan       0.216658
+                       availability_365       0.161551
+                      number_of_reviews       0.105884
+                      reviews_per_month       0.098098
+       neighbourhood_group_clean_Queens       0.045986
+                      construction_year       0.026727
+                                  price       0.018224
+        neighbourhood_group_clean_Bronx       0.012600
+     neighbourhood_group_clean_Brooklyn       0.009891
+                     review_rate_number       0.005504
+neighbourhood_group_clean_Staten Island       0.003374
+           cancellation_policy_flexible       0.001999
+     host_identity_verified_unconfirmed       0.001952
+           cancellation_policy_moderate       0.001042
+                       instant_bookable       0.000458
+             cancellation_policy_strict       0.000309
+            cancellation_policy_Unknown       0.000187
+        host_identity_verified_verified       0.000152
+      neighbourhood_group_clean_Unknown       0.000000
+         host_identity_verified_Unknown       0.000000
+
+SHAP values in this analysis represent each feature's push toward room_type = 'Private room' (positive = toward it, negative = toward 'Entire home/apt'). Ranked by mean |SHAP value| across all 19759 test-set samples, the most influential feature is 'calculated_host_listings_count' (mean |SHAP| = 0.5306), followed by 'minimum_nights' (mean |SHAP| = 0.4018) and 'neighbourhood_group_clean_Manhattan' (mean |SHAP| = 0.2167).
+
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Private room.png
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_importance_Private room.png
+
+========================================
+Cell 40
+========================================
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+Sample #42: actual room_type = 'Private room', model predicted = 'Private room'. Top individual drivers for this prediction:
+  calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955)
+  availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805)
+  neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = -0.2784)
+  reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155)
+  minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42.png
+
+========================================
+Cell 41
+========================================
+LIME setup failed. Full traceback below:
+======================================================================
+Traceback (most recent call last):
+  File "/var/folders/4b/v09nd7kd13q05lr2d8tmfsjc0000gn/T/ipykernel_85247/3534567347.py", line 38, in <module>
+    lime_html_path = generate_lime_html_report([lime_plot_path], name_prefix="room_type")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'generate_lime_html_report' is not defined
+======================================================================
+
+========================================
+Cell 42
+========================================
+XAI DOCX report saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 43
+========================================
+
+LIME's locally-fit linear approximation for sample #42 (predicted 'Private room'):
+  minimum_nights <= -0.33  ->  weight = 0.1155
+  0.00 < neighbourhood_group_clean_Manhattan <= 1.00  ->  weight = -0.0991
+  calculated_host_listings_count > -0.18  ->  weight = -0.055
+  neighbourhood_group_clean_Queens <= 0.00  ->  weight = -0.0443
+  neighbourhood_group_clean_Staten Island <= 0.00  ->  weight = 0.0366
+  neighbourhood_group_clean_Unknown <= 0.00  ->  weight = 0.0331
+  neighbourhood_group_clean_Bronx <= 0.00  ->  weight = 0.0298
+  reviews_per_month <= -0.63  ->  weight = 0.0193
+  host_identity_verified_Unknown <= 0.00  ->  weight = -0.0177
+  availability_365 > 0.95  ->  weight = 0.0171
+  -0.54 < number_of_reviews <= -0.42  ->  weight = -0.0146
+  -0.22 < review_rate_number <= 0.56  ->  weight = 0.0127
+  -0.08 < construction_year <= 0.78  ->  weight = 0.01
+  cancellation_policy_Unknown <= 0.00  ->  weight = 0.0061
+  -0.86 < price <= -0.00  ->  weight = 0.0048
+  0.00 < cancellation_policy_strict <= 1.00  ->  weight = 0.0042
+  cancellation_policy_flexible <= 0.00  ->  weight = -0.0041
+  host_identity_verified_verified <= 0.00  ->  weight = 0.0033
+  cancellation_policy_moderate <= 0.00  ->  weight = -0.0032
+  0.00 < host_identity_verified_unconfirmed <= 1.00  ->  weight = 0.0031
+  instant_bookable <= 0.00  ->  weight = 0.0026
+  neighbourhood_group_clean_Brooklyn <= 0.00  ->  weight = -0.002
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/room_type_lime_report_42.html
+
+========================================
+Cell 44
+========================================
+XAI DOCX report saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 45
+========================================
+Preprocessing: 102599 -> 101097 rows (1502 dropped)
+  - duplicate id: 0 rows
+  - invalid/missing price or service_fee: 486 rows
+  - negative minimum_nights: 13 rows
+  - negative availability_365: 429 rows
+  - lat/long out of range: 0 rows
+  - invalid room_type: 0 rows
+  - invalid cancellation_policy: 0 rows
+  - invalid host_identity_verified: 0 rows
+  - invalid neighbourhood_group after cleaning: 0 rows
+  - has reviews but missing last_review: 33 rows
+  - full duplicate row: 0 rows
+
+Full audit of 961 dropped rows saved to: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/reports/dropped_rows_audit.csv
+
+========================================
+Cell 46
+========================================
+
+GE: MISSING DIRECTORY
+
+cerberus_reports: MISSING DIRECTORY
+
+pydantic_reports: MISSING DIRECTORY
+
+duckdb_reports: MISSING DIRECTORY
+
+========================================
+Cell 47
+========================================
+
+========================================
+Cell 48
+========================================
+
+========================================
+Cell 49
+========================================
+
+========================================
+Cell 50
+========================================
+
+========================================
+Cell 51
+========================================
+
+========================================
+Cell 52
+========================================
+
+========================================
+Cell 53
+========================================
+   Logistic Regression  Random Forest   XGBoost  LightGBM  Tuned XGBoost  \
+0             0.566689       0.673765  0.691224  0.689023       0.745616   
+1             0.568799       0.670678  0.689163  0.685937       0.738622   
+2             0.568875       0.677434  0.691858  0.687113       0.743519   
+
+        SVM  
+0  0.610719  
+1  0.613779  
+2  0.612792  
+
+========================================
+Cell 54
+========================================
+
+========================================
+Cell 55
+========================================
+
+========================================
+Cell 56
+========================================
+shap_values.values shape: (19759, 22)
+
+===== Entire home/apt =====
+                                feature  mean_abs_shap
+         calculated_host_listings_count       0.530604
+                         minimum_nights       0.401803
+    neighbourhood_group_clean_Manhattan       0.216658
+                       availability_365       0.161551
+                      number_of_reviews       0.105884
+                      reviews_per_month       0.098098
+       neighbourhood_group_clean_Queens       0.045986
+                      construction_year       0.026727
+                                  price       0.018224
+        neighbourhood_group_clean_Bronx       0.012600
+     neighbourhood_group_clean_Brooklyn       0.009891
+                     review_rate_number       0.005504
+neighbourhood_group_clean_Staten Island       0.003374
+           cancellation_policy_flexible       0.001999
+     host_identity_verified_unconfirmed       0.001952
+           cancellation_policy_moderate       0.001042
+                       instant_bookable       0.000458
+             cancellation_policy_strict       0.000309
+            cancellation_policy_Unknown       0.000187
+        host_identity_verified_verified       0.000152
+      neighbourhood_group_clean_Unknown       0.000000
+         host_identity_verified_Unknown       0.000000
+SHAP values here represent each feature's push toward room_type = 'Entire home/apt'. Ranked by mean |SHAP value| across all 19759 test-set samples, the most influential feature is 'calculated_host_listings_count' (mean |SHAP| = 0.5306), followed by 'minimum_nights' (mean |SHAP| = 0.4018) and 'neighbourhood_group_clean_Manhattan' (mean |SHAP| = 0.2167).
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Entire home_apt.png
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_importance_Entire home_apt.png
+
+===== Private room =====
+                                feature  mean_abs_shap
+         calculated_host_listings_count       0.530604
+                         minimum_nights       0.401803
+    neighbourhood_group_clean_Manhattan       0.216658
+                       availability_365       0.161551
+                      number_of_reviews       0.105884
+                      reviews_per_month       0.098098
+       neighbourhood_group_clean_Queens       0.045986
+                      construction_year       0.026727
+                                  price       0.018224
+        neighbourhood_group_clean_Bronx       0.012600
+     neighbourhood_group_clean_Brooklyn       0.009891
+                     review_rate_number       0.005504
+neighbourhood_group_clean_Staten Island       0.003374
+           cancellation_policy_flexible       0.001999
+     host_identity_verified_unconfirmed       0.001952
+           cancellation_policy_moderate       0.001042
+                       instant_bookable       0.000458
+             cancellation_policy_strict       0.000309
+            cancellation_policy_Unknown       0.000187
+        host_identity_verified_verified       0.000152
+      neighbourhood_group_clean_Unknown       0.000000
+         host_identity_verified_Unknown       0.000000
+SHAP values here represent each feature's push toward room_type = 'Private room'. Ranked by mean |SHAP value| across all 19759 test-set samples, the most influential feature is 'calculated_host_listings_count' (mean |SHAP| = 0.5306), followed by 'minimum_nights' (mean |SHAP| = 0.4018) and 'neighbourhood_group_clean_Manhattan' (mean |SHAP| = 0.2167).
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_beeswarm_Private room.png
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/global_importance_Private room.png
+
+========================================
+Cell 57
+========================================
+
+===== Local SHAP for class 'Entire home/apt' =====
+Sample #42 relative to 'Entire home/apt': calculated_host_listings_count = 0.1252  ->  pushes away from 'Entire home/apt'  (SHAP = -1.4955); availability_365 = 1.6978  ->  pushes away from 'Entire home/apt'  (SHAP = -0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = 0.2784); reviews_per_month = -0.7636  ->  pushes away from 'Entire home/apt'  (SHAP = -0.2155); minimum_nights = -0.3289  ->  pushes away from 'Entire home/apt'  (SHAP = -0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Entire home_apt.png
+
+===== Local SHAP for class 'Private room' =====
+Sample #42 relative to 'Private room': calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955); availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes away from 'Private room'  (SHAP = -0.2784); reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155); minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 58
+========================================
+
+===== LIME for class 'Entire home/apt' =====
+LIME's locally-fit linear approximation for sample #42, relative to 'Entire home/apt':
+  minimum_nights <= -0.33  ->  weight = -0.119
+  0.00 < neighbourhood_group_clean_Manhattan <= 1.00  ->  weight = 0.0918
+  calculated_host_listings_count > -0.18  ->  weight = 0.07
+  neighbourhood_group_clean_Queens <= 0.00  ->  weight = 0.0516
+  neighbourhood_group_clean_Bronx <= 0.00  ->  weight = -0.0494
+  host_identity_verified_Unknown <= 0.00  ->  weight = 0.0381
+  reviews_per_month <= -0.63  ->  weight = -0.0142
+  -0.22 < review_rate_number <= 0.56  ->  weight = -0.014
+  cancellation_policy_Unknown <= 0.00  ->  weight = -0.014
+  neighbourhood_group_clean_Brooklyn <= 0.00  ->  weight = 0.013
+  -0.08 < construction_year <= 0.78  ->  weight = -0.0111
+  -0.54 < number_of_reviews <= -0.42  ->  weight = 0.0107
+  neighbourhood_group_clean_Unknown <= 0.00  ->  weight = -0.0093
+  availability_365 > 0.95  ->  weight = -0.0071
+  neighbourhood_group_clean_Staten Island <= 0.00  ->  weight = -0.0064
+  -0.86 < price <= -0.00  ->  weight = -0.006
+  0.00 < host_identity_verified_unconfirmed <= 1.00  ->  weight = 0.0054
+  instant_bookable <= 0.00  ->  weight = -0.0048
+  cancellation_policy_moderate <= 0.00  ->  weight = -0.0044
+  0.00 < cancellation_policy_strict <= 1.00  ->  weight = -0.0034
+  host_identity_verified_verified <= 0.00  ->  weight = 0.0022
+  cancellation_policy_flexible <= 0.00  ->  weight = -0.0018
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42_Entire home_apt.png
+
+===== LIME for class 'Private room' =====
+LIME's locally-fit linear approximation for sample #42, relative to 'Private room':
+  minimum_nights <= -0.33  ->  weight = 0.119
+  0.00 < neighbourhood_group_clean_Manhattan <= 1.00  ->  weight = -0.0918
+  calculated_host_listings_count > -0.18  ->  weight = -0.07
+  neighbourhood_group_clean_Queens <= 0.00  ->  weight = -0.0516
+  neighbourhood_group_clean_Bronx <= 0.00  ->  weight = 0.0494
+  host_identity_verified_Unknown <= 0.00  ->  weight = -0.0381
+  reviews_per_month <= -0.63  ->  weight = 0.0142
+  -0.22 < review_rate_number <= 0.56  ->  weight = 0.014
+  cancellation_policy_Unknown <= 0.00  ->  weight = 0.014
+  neighbourhood_group_clean_Brooklyn <= 0.00  ->  weight = -0.013
+  -0.08 < construction_year <= 0.78  ->  weight = 0.0111
+  -0.54 < number_of_reviews <= -0.42  ->  weight = -0.0107
+  neighbourhood_group_clean_Unknown <= 0.00  ->  weight = 0.0093
+  availability_365 > 0.95  ->  weight = 0.0071
+  neighbourhood_group_clean_Staten Island <= 0.00  ->  weight = 0.0064
+  -0.86 < price <= -0.00  ->  weight = 0.006
+  0.00 < host_identity_verified_unconfirmed <= 1.00  ->  weight = -0.0054
+  instant_bookable <= 0.00  ->  weight = 0.0048
+  cancellation_policy_moderate <= 0.00  ->  weight = 0.0044
+  0.00 < cancellation_policy_strict <= 1.00  ->  weight = 0.0034
+  host_identity_verified_verified <= 0.00  ->  weight = -0.0022
+  cancellation_policy_flexible <= 0.00  ->  weight = 0.0018
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42_Private room.png
+
+Saved HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/room_type_lime_report_42.html
+
+========================================
+Cell 59
+========================================
+XAI DOCX report saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 60
+========================================
+
+========================================
+Cell 61
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.11971271171766916), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09240405476102068), ('host_identity_verified_Unknown <= 0.00', -0.07083756697886222), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.053766887921389984), ('calculated_host_listings_count > -0.18', -0.04583977943495049), ('neighbourhood_group_clean_Queens <= 0.00', -0.036339971617096754), ('neighbourhood_group_clean_Bronx <= 0.00', 0.026372080981176892), ('neighbourhood_group_clean_Unknown <= 0.00', -0.020587733313710478), ('reviews_per_month <= -0.63', 0.018066704069304357), ('cancellation_policy_Unknown <= 0.00', 0.011533393137217825)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+
+========================================
+Cell 62
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('neighbourhood_group_clean_Unknown <= 0.00', -0.1302318122286663), ('minimum_nights <= -0.33', 0.1201251091338516), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09355753172967787), ('host_identity_verified_Unknown <= 0.00', 0.05479402925169674), ('calculated_host_listings_count > -0.18', -0.04882339444582016), ('neighbourhood_group_clean_Queens <= 0.00', -0.043006671303271876), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.030005276986624432), ('neighbourhood_group_clean_Bronx <= 0.00', 0.022782489933851412), ('-0.22 < review_rate_number <= 0.56', 0.012516923986283103), ('cancellation_policy_Unknown <= 0.00', 0.01172458075833232)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+
+========================================
+Cell 63
+========================================
+
+========================================
+Cell 64
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12517429009813663), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.0978553618631241), ('calculated_host_listings_count > -0.18', -0.05324359738862776), ('neighbourhood_group_clean_Queens <= 0.00', -0.03987951190657205), ('host_identity_verified_Unknown <= 0.00', -0.02716342322009424), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.02559456828739563), ('neighbourhood_group_clean_Bronx <= 0.00', 0.021397230965039232), ('-0.86 < price <= -0.00', 0.014912483475742193), ('cancellation_policy_Unknown <= 0.00', 0.014897869232106467), ('reviews_per_month <= -0.63', 0.011640204288354128)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 65
+========================================
+Running Final XAI Analysis (Airbnb Room Type)...
+XAI dataset saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+Final XAI analysis added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+  predicted_room_type                                         xai_reason
+0        Private room  Prediction influenced by calculated_host_listi...
+1        Private room  Prediction influenced by calculated_host_listi...
+2        Private room  Prediction influenced by calculated_host_listi...
+3     Entire home/apt  Prediction influenced by calculated_host_listi...
+4        Private room  Prediction influenced by calculated_host_listi...
+
+========================================
+Cell 66
+========================================
+Running Final XAI Analysis (Airbnb Room Type)...
+XAI dataset saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+Final XAI analysis added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+  predicted_room_type                                         xai_reason
+0        Private room  Prediction influenced by calculated_host_listi...
+1        Private room  Prediction influenced by calculated_host_listi...
+2        Private room  Prediction influenced by calculated_host_listi...
+3     Entire home/apt  Prediction influenced by calculated_host_listi...
+4        Private room  Prediction influenced by calculated_host_listi...
+
+========================================
+Cell 67
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12179664704936606), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09797136937231372), ('neighbourhood_group_clean_Unknown <= 0.00', -0.05312721677483193), ('host_identity_verified_Unknown <= 0.00', -0.04631250385105763), ('calculated_host_listings_count > -0.18', -0.046068906848383946), ('neighbourhood_group_clean_Queens <= 0.00', -0.0369519465263933), ('-0.86 < price <= -0.00', 0.017432677775875136), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.01712847071224531), ('neighbourhood_group_clean_Bronx <= 0.00', 0.012094092320226986), ('cancellation_policy_Unknown <= 0.00', -0.007667608632713585)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 68
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+LIME image : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+LIME HTML  : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+XAI CSV    : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+
+========================================
+Cell 69
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 70
+========================================
+
+===== Local SHAP (force plot) for class 'Entire home/apt' =====
+Sample #42 relative to 'Entire home/apt': calculated_host_listings_count = 0.1252  ->  pushes away from 'Entire home/apt'  (SHAP = -1.4955); availability_365 = 1.6978  ->  pushes away from 'Entire home/apt'  (SHAP = -0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = 0.2784); reviews_per_month = -0.7636  ->  pushes away from 'Entire home/apt'  (SHAP = -0.2155); minimum_nights = -0.3289  ->  pushes away from 'Entire home/apt'  (SHAP = -0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Entire home_apt.png
+
+===== Local SHAP (force plot) for class 'Private room' =====
+Sample #42 relative to 'Private room': calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955); availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes away from 'Private room'  (SHAP = -0.2784); reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155); minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 71
+========================================
+
+===== Local SHAP (force plot) for class 'Entire home/apt' =====
+Sample #42 relative to 'Entire home/apt': calculated_host_listings_count = 0.1252  ->  pushes away from 'Entire home/apt'  (SHAP = -1.4955); availability_365 = 1.6978  ->  pushes away from 'Entire home/apt'  (SHAP = -0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = 0.2784); reviews_per_month = -0.7636  ->  pushes away from 'Entire home/apt'  (SHAP = -0.2155); minimum_nights = -0.3289  ->  pushes away from 'Entire home/apt'  (SHAP = -0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Entire home_apt.png
+
+===== Local SHAP (force plot) for class 'Private room' =====
+Sample #42 relative to 'Private room': calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955); availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes away from 'Private room'  (SHAP = -0.2784); reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155); minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 72
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12352451627944866), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09911474250460553), ('cancellation_policy_Unknown <= 0.00', -0.05361384817217309), ('calculated_host_listings_count > -0.18', -0.05091619092483794), ('neighbourhood_group_clean_Queens <= 0.00', -0.04801564637230406), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.047096489707861254), ('host_identity_verified_Unknown <= 0.00', 0.02812928961685117), ('reviews_per_month <= -0.63', 0.020134787450525903), ('neighbourhood_group_clean_Bronx <= 0.00', 0.014803803571038974), ('neighbourhood_group_clean_Brooklyn <= 0.00', -0.014667892169428511)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 73
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 74
+========================================
+XAI bridge data saved to: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/runtime
+
+========================================
+Cell 75
+========================================
+
+========================================
+Cell 76
+========================================
+
+========================================
+Cell 77
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 78
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 79
+========================================
+Model comparison saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/model_comparison_results.csv
+shape: (6, 2)
++---------------------+----------+
+| model               | accuracy |
+| ---                 | ---      |
+| str                 | f64      |
++================================+
+| XGBoost (tuned)     | 0.764057 |
+|---------------------+----------|
+| XGBoost (untuned)   | 0.688092 |
+|---------------------+----------|
+| LightGBM            | 0.686573 |
+|---------------------+----------|
+| Random Forest       | 0.668961 |
+|---------------------+----------|
+| SVM                 | 0.613999 |
+|---------------------+----------|
+| Logistic Regression | 0.567589 |
++---------------------+----------+
+.54 < number_of_reviews <= -0.42  ->  weight = 0.0107
+  neighbourhood_group_clean_Unknown <= 0.00  ->  weight = -0.0093
+  availability_365 > 0.95  ->  weight = -0.0071
+  neighbourhood_group_clean_Staten Island <= 0.00  ->  weight = -0.0064
+  -0.86 < price <= -0.00  ->  weight = -0.006
+  0.00 < host_identity_verified_unconfirmed <= 1.00  ->  weight = 0.0054
+  instant_bookable <= 0.00  ->  weight = -0.0048
+  cancellation_policy_moderate <= 0.00  ->  weight = -0.0044
+  0.00 < cancellation_policy_strict <= 1.00  ->  weight = -0.0034
+  host_identity_verified_verified <= 0.00  ->  weight = 0.0022
+  cancellation_policy_flexible <= 0.00  ->  weight = -0.0018
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42_Entire home_apt.png
+
+===== LIME for class 'Private room' =====
+LIME's locally-fit linear approximation for sample #42, relative to 'Private room':
+  minimum_nights <= -0.33  ->  weight = 0.119
+  0.00 < neighbourhood_group_clean_Manhattan <= 1.00  ->  weight = -0.0918
+  calculated_host_listings_count > -0.18  ->  weight = -0.07
+  neighbourhood_group_clean_Queens <= 0.00  ->  weight = -0.0516
+  neighbourhood_group_clean_Bronx <= 0.00  ->  weight = 0.0494
+  host_identity_verified_Unknown <= 0.00  ->  weight = -0.0381
+  reviews_per_month <= -0.63  ->  weight = 0.0142
+  -0.22 < review_rate_number <= 0.56  ->  weight = 0.014
+  cancellation_policy_Unknown <= 0.00  ->  weight = 0.014
+  neighbourhood_group_clean_Brooklyn <= 0.00  ->  weight = -0.013
+  -0.08 < construction_year <= 0.78  ->  weight = 0.0111
+  -0.54 < number_of_reviews <= -0.42  ->  weight = -0.0107
+  neighbourhood_group_clean_Unknown <= 0.00  ->  weight = 0.0093
+  availability_365 > 0.95  ->  weight = 0.0071
+  neighbourhood_group_clean_Staten Island <= 0.00  ->  weight = 0.0064
+  -0.86 < price <= -0.00  ->  weight = 0.006
+  0.00 < host_identity_verified_unconfirmed <= 1.00  ->  weight = -0.0054
+  instant_bookable <= 0.00  ->  weight = 0.0048
+  cancellation_policy_moderate <= 0.00  ->  weight = 0.0044
+  0.00 < cancellation_policy_strict <= 1.00  ->  weight = 0.0034
+  host_identity_verified_verified <= 0.00  ->  weight = -0.0022
+  cancellation_policy_flexible <= 0.00  ->  weight = 0.0018
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42_Private room.png
+
+Saved HTML: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/room_type_lime_report_42.html
+
+========================================
+Cell 81
+========================================
+XAI DOCX report saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 82
+========================================
+
+========================================
+Cell 83
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.11971271171766916), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09240405476102068), ('host_identity_verified_Unknown <= 0.00', -0.07083756697886222), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.053766887921389984), ('calculated_host_listings_count > -0.18', -0.04583977943495049), ('neighbourhood_group_clean_Queens <= 0.00', -0.036339971617096754), ('neighbourhood_group_clean_Bronx <= 0.00', 0.026372080981176892), ('neighbourhood_group_clean_Unknown <= 0.00', -0.020587733313710478), ('reviews_per_month <= -0.63', 0.018066704069304357), ('cancellation_policy_Unknown <= 0.00', 0.011533393137217825)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+
+========================================
+Cell 84
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('neighbourhood_group_clean_Unknown <= 0.00', -0.1302318122286663), ('minimum_nights <= -0.33', 0.1201251091338516), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09355753172967787), ('host_identity_verified_Unknown <= 0.00', 0.05479402925169674), ('calculated_host_listings_count > -0.18', -0.04882339444582016), ('neighbourhood_group_clean_Queens <= 0.00', -0.043006671303271876), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.030005276986624432), ('neighbourhood_group_clean_Bronx <= 0.00', 0.022782489933851412), ('-0.22 < review_rate_number <= 0.56', 0.012516923986283103), ('cancellation_policy_Unknown <= 0.00', 0.01172458075833232)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+
+========================================
+Cell 85
+========================================
+
+========================================
+Cell 86
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12517429009813663), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.0978553618631241), ('calculated_host_listings_count > -0.18', -0.05324359738862776), ('neighbourhood_group_clean_Queens <= 0.00', -0.03987951190657205), ('host_identity_verified_Unknown <= 0.00', -0.02716342322009424), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.02559456828739563), ('neighbourhood_group_clean_Bronx <= 0.00', 0.021397230965039232), ('-0.86 < price <= -0.00', 0.014912483475742193), ('cancellation_policy_Unknown <= 0.00', 0.014897869232106467), ('reviews_per_month <= -0.63', 0.011640204288354128)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 87
+========================================
+Running Final XAI Analysis (Airbnb Room Type)...
+XAI dataset saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+Final XAI analysis added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+  predicted_room_type                                         xai_reason
+0        Private room  Prediction influenced by calculated_host_listi...
+1        Private room  Prediction influenced by calculated_host_listi...
+2        Private room  Prediction influenced by calculated_host_listi...
+3     Entire home/apt  Prediction influenced by calculated_host_listi...
+4        Private room  Prediction influenced by calculated_host_listi...
+
+========================================
+Cell 88
+========================================
+Running Final XAI Analysis (Airbnb Room Type)...
+XAI dataset saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+Final XAI analysis added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+  predicted_room_type                                         xai_reason
+0        Private room  Prediction influenced by calculated_host_listi...
+1        Private room  Prediction influenced by calculated_host_listi...
+2        Private room  Prediction influenced by calculated_host_listi...
+3     Entire home/apt  Prediction influenced by calculated_host_listi...
+4        Private room  Prediction influenced by calculated_host_listi...
+
+========================================
+Cell 89
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12179664704936606), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09797136937231372), ('neighbourhood_group_clean_Unknown <= 0.00', -0.05312721677483193), ('host_identity_verified_Unknown <= 0.00', -0.04631250385105763), ('calculated_host_listings_count > -0.18', -0.046068906848383946), ('neighbourhood_group_clean_Queens <= 0.00', -0.0369519465263933), ('-0.86 < price <= -0.00', 0.017432677775875136), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.01712847071224531), ('neighbourhood_group_clean_Bronx <= 0.00', 0.012094092320226986), ('cancellation_policy_Unknown <= 0.00', -0.007667608632713585)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 90
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+LIME image : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+LIME HTML  : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+XAI CSV    : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/airbnb_room_type_xai_output.csv
+
+========================================
+Cell 91
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 92
+========================================
+
+===== Local SHAP (force plot) for class 'Entire home/apt' =====
+Sample #42 relative to 'Entire home/apt': calculated_host_listings_count = 0.1252  ->  pushes away from 'Entire home/apt'  (SHAP = -1.4955); availability_365 = 1.6978  ->  pushes away from 'Entire home/apt'  (SHAP = -0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = 0.2784); reviews_per_month = -0.7636  ->  pushes away from 'Entire home/apt'  (SHAP = -0.2155); minimum_nights = -0.3289  ->  pushes away from 'Entire home/apt'  (SHAP = -0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Entire home_apt.png
+
+===== Local SHAP (force plot) for class 'Private room' =====
+Sample #42 relative to 'Private room': calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955); availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes away from 'Private room'  (SHAP = -0.2784); reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155); minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 93
+========================================
+
+===== Local SHAP (force plot) for class 'Entire home/apt' =====
+Sample #42 relative to 'Entire home/apt': calculated_host_listings_count = 0.1252  ->  pushes away from 'Entire home/apt'  (SHAP = -1.4955); availability_365 = 1.6978  ->  pushes away from 'Entire home/apt'  (SHAP = -0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes toward 'Entire home/apt'  (SHAP = 0.2784); reviews_per_month = -0.7636  ->  pushes away from 'Entire home/apt'  (SHAP = -0.2155); minimum_nights = -0.3289  ->  pushes away from 'Entire home/apt'  (SHAP = -0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Entire home_apt.png
+
+===== Local SHAP (force plot) for class 'Private room' =====
+Sample #42 relative to 'Private room': calculated_host_listings_count = 0.1252  ->  pushes toward 'Private room'  (SHAP = 1.4955); availability_365 = 1.6978  ->  pushes toward 'Private room'  (SHAP = 0.3805); neighbourhood_group_clean_Manhattan = 1.0  ->  pushes away from 'Private room'  (SHAP = -0.2784); reviews_per_month = -0.7636  ->  pushes toward 'Private room'  (SHAP = 0.2155); minimum_nights = -0.3289  ->  pushes toward 'Private room'  (SHAP = 0.186)
+Saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 94
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12352451627944866), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09911474250460553), ('cancellation_policy_Unknown <= 0.00', -0.05361384817217309), ('calculated_host_listings_count > -0.18', -0.05091619092483794), ('neighbourhood_group_clean_Queens <= 0.00', -0.04801564637230406), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.047096489707861254), ('host_identity_verified_Unknown <= 0.00', 0.02812928961685117), ('reviews_per_month <= -0.63', 0.020134787450525903), ('neighbourhood_group_clean_Bronx <= 0.00', 0.014803803571038974), ('neighbourhood_group_clean_Brooklyn <= 0.00', -0.014667892169428511)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 95
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 96
+========================================
+XAI bridge data saved to: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/runtime
+
+========================================
+Cell 97
+========================================
+
+========================================
+Cell 98
+========================================
+
+========================================
+Cell 99
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 100
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 101
+========================================
+Model comparison saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/model_comparison_results.csv
+shape: (6, 2)
++---------------------+----------+
+| model               | accuracy |
+| ---                 | ---      |
+| str                 | f64      |
++================================+
+| XGBoost (tuned)     | 0.764057 |
+|---------------------+----------|
+| XGBoost (untuned)   | 0.688092 |
+|---------------------+----------|
+| LightGBM            | 0.686573 |
+|---------------------+----------|
+| Random Forest       | 0.668961 |
+|---------------------+----------|
+| SVM                 | 0.613999 |
+|---------------------+----------|
+| Logistic Regression | 0.567589 |
++---------------------+----------+
+ktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/shap/local_shap_42_Private room.png
+
+Sample index: 42
+Actual room_type: Private room   Predicted: Private room
+
+========================================
+Cell 103
+========================================
+Predicted class: Private room
+Prediction probabilities: {'Entire home/apt': np.float64(0.11979860533286368), 'Private room': np.float64(0.8802013946671363)}
+[('minimum_nights <= -0.33', 0.12352451627944866), ('0.00 < neighbourhood_group_clean_Manhattan <= 1.00', -0.09911474250460553), ('cancellation_policy_Unknown <= 0.00', -0.05361384817217309), ('calculated_host_listings_count > -0.18', -0.05091619092483794), ('neighbourhood_group_clean_Queens <= 0.00', -0.04801564637230406), ('neighbourhood_group_clean_Staten Island <= 0.00', 0.047096489707861254), ('host_identity_verified_Unknown <= 0.00', 0.02812928961685117), ('reviews_per_month <= -0.63', 0.020134787450525903), ('neighbourhood_group_clean_Bronx <= 0.00', 0.014803803571038974), ('neighbourhood_group_clean_Brooklyn <= 0.00', -0.014667892169428511)]
+
+Saved image: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_plot_42.png
+Saved HTML : /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/lime/lime_report_42.html
+Generating LIME Explanation (Airbnb Room Type)...
+LIME explanation added to report: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 104
+========================================
+
+--- FINAL OUTPUTS ---
+XAI DOCX report (SHAP + LIME + Final XAI, one section each): /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/xai_report/Airbnb_RoomType_XAI_Report.docx
+
+========================================
+Cell 105
+========================================
+XAI bridge data saved to: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/runtime
+
+========================================
+Cell 106
+========================================
+
+========================================
+Cell 107
+========================================
+
+========================================
+Cell 108
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 109
+========================================
+                                feature  importance
+5        calculated_host_listings_count    0.530604
+1                        minimum_nights    0.401803
+11  neighbourhood_group_clean_Manhattan    0.216658
+6                      availability_365    0.161551
+2                     number_of_reviews    0.105884
+
+========================================
+Cell 110
+========================================
+Model comparison saved: /Users/vishwajeetsiranje/Desktop/AIR_BNB_PREDICTION/Airbnb_Data_Prediction/outputs/model_comparison_results.csv
+shape: (6, 2)
++---------------------+----------+
+| model               | accuracy |
+| ---                 | ---      |
+| str                 | f64      |
++================================+
+| XGBoost (tuned)     | 0.764057 |
+|---------------------+----------|
+| XGBoost (untuned)   | 0.688092 |
+|---------------------+----------|
+| LightGBM            | 0.686573 |
+|---------------------+----------|
+| Random Forest       | 0.668961 |
+|---------------------+----------|
+| SVM                 | 0.613999 |
+|---------------------+----------|
+| Logistic Regression | 0.567589 |
++---------------------+----------+
